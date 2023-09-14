@@ -1,0 +1,40 @@
+import { Text, View, StyleSheet, Image, Button, Alert} from 'react-native';
+
+export default function AssetExample() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.paragraph}>
+        Aprender xadrez é mais facil do que parece
+      </Text>
+      <Image style={styles.logo} source={require('../assets/xadrez1.jpg')} />
+      <Image style={styles.logo1} source={require('../assets/xadrez2.jpg')} />
+      <Button
+      title="Quer aprender?"
+      onPress={() => Alert.alert("Desculpe ainda não estamos com o curso completo")}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 80,
+  },
+  paragraph: {
+    margin: 0,
+    marginBottom: 60,
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  logo: {
+    height: 128,
+    width: 300,
+  },
+  logo1: {
+    height: 280,
+    width: 280,
+  },
+});
